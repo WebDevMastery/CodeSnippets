@@ -1,0 +1,91 @@
+/* Import font */
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+/* General styles */
+body {
+  background-color: rgb(50, 62, 85);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3em;
+  font-weight: 700;
+  pointer-events: none;
+  opacity: 0;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+
+ul li:hover::before {
+  opacity: 0.3;
+  letter-spacing: 20px;
+}
+
+ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 15px;
+  text-decoration: none;
+  background: #2196f3;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+ul:hover li a {
+  opacity: 0;
+}
+
+ul li a:hover {
+  transform: scale(1.4);
+  z-index: 1000;
+  background: #5ec831;
+  opacity: 1;
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  transform: skew(35deg);
+  transition: 0s;
+}
+
+ul li a:hover:before {
+  left: calc(100% + 100px);
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
