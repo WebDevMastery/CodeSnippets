@@ -1,0 +1,73 @@
+/* Import font */
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+/* General styles */
+
+body {
+  background-color: rgb(50, 62, 85);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+/* General styles end */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inputBox {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.7);
+  background: rgb(50, 62, 85);
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1.1em;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #75e44f;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: rgb(50, 62, 85);
+  border-left: 1px solid #75e44f;
+  border-right: 1px solid #75e44f;
+  letter-spacing: 0.2em;
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span {
+  background: #75e44f;
+  color: rgb(50, 62, 85);
+  border-radius: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid #75e44f;
+}
