@@ -1,0 +1,85 @@
+/* Import font */
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+/* General styles */
+body {
+  background-color: rgb(55, 79, 123);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+/* General styles end */
+
+.button {
+  position: relative;
+  background: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: #e4e6e4;
+  padding: 20px 50px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  letter-spacing: 0.25em;
+  background: #75e44f;
+  color: #75e44f;
+  box-shadow: 0 0 35px #75e44f;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: rgb(55, 79, 123);
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: rgb(55, 79, 123);
+  transform: translateX(-50%) skewX(324deg);
+  transition: 0.5s;
+}
+
+.button:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.button i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: rgb(55, 79, 123);
+  transform: translateX(-50%) skewX(324deg);
+  transition: 0.5s;
+}
+
+.button:hover i::after {
+  width: 20px;
+  left: 80%;
+}
