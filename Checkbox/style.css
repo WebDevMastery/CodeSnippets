@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(50, 62, 85);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.container span {
+  margin-left: 1rem;
+}
+
+.check-input {
+  display: none;
+}
+.checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 3px;
+  transition: 0.3s all;
+}
+.checkbox svg {
+  width: 20px;
+  height: 20px;
+}
+.check-input:checked + .checkbox {
+  background: #75e44f;
+  border: 2px solid #75e44f;
+}
+.check-input:checked + .checkbox svg path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke: #fff;
+  stroke-width: 3;
+  animation: check 4s forwards;
+}
+.checkbox::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #74e44f48;
+  z-index: -1;
+}
+.check-input:checked + .checkbox::before {
+  animation: ripple 0.3s;
+}
+@keyframes check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    transform: scale(1);
+  }
+}

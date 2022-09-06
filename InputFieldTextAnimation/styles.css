@@ -1,9 +1,14 @@
 /* Import font */
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 /* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: rgb(50, 62, 85);
+  background-color: #323e55;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -14,11 +19,6 @@ body {
 }
 /* General styles end */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .inputBox {
   position: relative;
   width: 250px;
