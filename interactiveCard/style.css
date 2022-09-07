@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: #323e55;
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  max-width: 300px;
+  background: #292b2c;
+  border-radius: 10px;
+  border: 1px solid #343637;
+  position: relative;
+  overflow: hidden;
+}
+.card .image-container {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.card img {
+  width: 100%;
+  height: 180%;
+  object-fit: cover;
+}
+
+.card:hover .image-container {
+  transform: scale(1.1);
+}
+
+.card .image-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.4);
+  mix-blend-mode: multiply;
+  transform: translateX(-120%) skewX(-10deg);
+  transition: transform 0.3s ease-out;
+}
+
+.card-footer {
+  padding: 2rem 2rem 3.5rem 2rem;
+  color: rgb(236, 232, 225);
+  transition: all 0.3s ease;
+}
+
+.card-footer h3 {
+  text-align: start;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card-footer span {
+  text-align: start;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #5a6469;
+}
+
+.card-footer p {
+  text-align: start;
+  font-size: 1.5rem;
+  line-height: 25px;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #5d89e9;
+}
+
+.read-more {
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.read-more span {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .read-more {
+  color: rgb(56, 62, 58);
+}
+.card:hover .read-more span {
+  transform: translateX(5px);
+}
+.card:hover .image-container::before {
+  transform: translateX(0) skewX(-10deg) scaleX(1.3);
+}
+
+.card:hover .card-footer {
+  background: #ffffff;
+  color: rgb(56, 62, 58);
+}
+
+.card:hover span {
+  color: #5d89e9;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #4f6de4 50%, rgb(56, 62, 58) 50%);
+  background-size: 200%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.card:hover::before {
+  background-position: 0%;
+}
