@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(50, 62, 85);
+  color: white;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: relative;
+  background: #393d3a;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  width: 180px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn:first-child:hover {
+  background: linear-gradient(90deg, #07a7f1, #fa46ac, #fae736, #07a7f1);
+  background-size: 400%;
+}
+
+.btn:last-child:hover {
+  background: linear-gradient(90deg, #07a7f1, #fa46ac, #fae736, #07a7f1);
+  background-size: 400%;
+}
+
+.btn:first-child:before,
+.btn:last-child:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.btn:first-child:hover:before,
+.btn:last-child:hover:before {
+  opacity: 1;
+  z-index: -1;
+}
+
+.btn:hover {
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
