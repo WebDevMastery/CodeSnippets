@@ -30,15 +30,14 @@ body {
   display: none;
 }
 .checkbox {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  width: 25px;
+  height: 25px;
   padding: 3px;
+  cursor: pointer;
+  border: 2px solid #fff;
   transition: 0.3s all;
 }
 .checkbox svg {
@@ -59,7 +58,6 @@ body {
 .checkbox::before {
   content: '';
   position: absolute;
-  border-radius: 50%;
   transform: scale(0);
   display: block;
   width: 40px;
