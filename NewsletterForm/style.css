@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #395c9d;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter_card {
+  background: linear-gradient(150deg, #539aeb, #c8a5f8);
+  width: 500px;
+  padding: 60px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #0000008b;
+}
+
+.newsletter_card h1 {
+  text-transform: uppercase;
+  color: #2d2360;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.newsletter_card span {
+  display: block;
+  color: #6255a3;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.newsletter_card p {
+  color: #f5f3fc;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.email {
+  width: 100%;
+  height: 60px;
+  background: #f1f1f1e2;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 45px;
+}
+
+.email input {
+  width: 100%;
+  height: 60px;
+  border: 0;
+  background: none;
+  padding: 0 30px;
+  outline: none;
+  font-size: 15px;
+  padding-right: 80px;
+}
+
+.email button {
+  background: #6255a3;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s linear;
+}
+
+.email button:hover {
+  opacity: 0.5;
+}
+
+.email:hover {
+  transform: scale(1.02);
+}
